@@ -1,0 +1,11 @@
+---
+include:
+  - board: aum_left
+    shield: lpm_view
+    snippet: studio-rpc-usb-uart
+  - board: aum_right
+    shield: lpm_view
+
+
+
+
