@@ -114,7 +114,7 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
     lv_point_t points[10];
     for (int i = 0; i < 10; i++) {
         points[i].x = 2 + i * 7;
-        points[i].y = 50 - (state->wpm[i] - min) * 50 / range;
+        points[i].y = 50 - (state->wpm[i] - min) * 28 / range;
     }
     lv_canvas_draw_line(canvas, points, 10, &line_dsc);
 
