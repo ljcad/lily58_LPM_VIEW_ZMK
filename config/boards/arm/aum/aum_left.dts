@@ -75,12 +75,7 @@ nice_view_spi: &spi2 {
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN) >;
 };
-&left_encoder {
-    status = "okay";
-};
-&left_pana_encoder {
-    status = "okay";
-};
+
 / {
 	chosen {
 		zmk,battery = &builtin_battery;
