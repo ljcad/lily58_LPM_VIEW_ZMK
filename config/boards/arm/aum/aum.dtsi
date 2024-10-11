@@ -33,7 +33,7 @@
 		>;
 	};
 
-
+};
 
 &adc {
 	status = "okay";
