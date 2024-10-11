@@ -31,31 +31,31 @@ sensors: sensors {
     i2c1_default: i2c1_default {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 1, 15)>,
-                <NRF_PSEL(TWIM_SCL, 0, 2)>;
-						bias-pull-up;
+	    <NRF_PSEL(TWIM_SCL, 0, 2)>;
+	    bias-pull-up;
         };
     };
 
     i2c1_sleep: i2c1_sleep {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 1, 15)>,
-                <NRF_PSEL(TWIM_SCL, 0, 2)>;
+            <NRF_PSEL(TWIM_SCL, 0, 2)>;
             low-power-enable;
-						bias-pull-up;
+	    bias-pull-up;
         };
     };
 		spi2_default: spi2_default {
 				group1 {
-						psels = <NRF_PSEL(SPIM_MOSI, 0, 12)>,
-								<NRF_PSEL(SPIM_SCK, 1, 9)>;
+					psels = <NRF_PSEL(SPIM_MOSI, 0, 12)>,
+					<NRF_PSEL(SPIM_SCK, 1, 9)>;
 				};
 		};
 
 		spi2_sleep: spi2_sleep {
 				group1 {
-						psels = <NRF_PSEL(SPIM_MOSI, 0, 12)>,
-								<NRF_PSEL(SPIM_SCK, 1, 9)>;
-						low-power-enable;
+					psels = <NRF_PSEL(SPIM_MOSI, 0, 12)>,
+					<NRF_PSEL(SPIM_SCK, 1, 9)>;
+					low-power-enable;
 				};
 		};
 };
@@ -100,28 +100,28 @@ nice_view_spi: &spi2 {
 / {
 	chosen {
 		zmk,battery =&builtin_battery;
-	    zmk,kscan = &kscan0;
+	    	zmk,kscan = &kscan0;
 		};
 		kscan0: kscan {
-	        compatible = "zmk,kscan-gpio-matrix";
-	        label = "KSCAN";
+		        compatible = "zmk,kscan-gpio-matrix";
+		        label = "KSCAN";
 	
-	        diode-direction = "col2row";
-	        col-gpios
-		    = <&gpio0  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio1  15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-	  	    , <&gpio1  13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio1  11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio0  10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio0  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    ;
-	        row-gpios
-		    = <&gpio0  24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio1  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-	  	    , <&gpio0  11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio1  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    , <&gpio1  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-		    ;
+		        diode-direction = "col2row";
+		        col-gpios
+			    = <&gpio0  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio1  15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+		  	    , <&gpio1  13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio1  11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio0  10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio0  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    ;
+		        row-gpios
+			    = <&gpio0  24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio1  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+		  	    , <&gpio0  11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio1  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    , <&gpio1  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+			    ;
 	    };
 	leds {
 		compatible = "gpio-leds";
