@@ -92,12 +92,7 @@ nice_view_spi: &spi2 {
     cs-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
-&right_encoder {
-    status = "okay";
-};
-&right_pana_encoder {
-    status = "okay";
-};
+
 &default_transform {
 		col-offset=<24>;
 };
