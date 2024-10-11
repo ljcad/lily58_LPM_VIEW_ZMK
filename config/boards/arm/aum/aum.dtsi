@@ -33,12 +33,7 @@
 		>;
 	};
 
-sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder &left_pana_encoder &right_pana_encoder>;
-        triggers-per-rotation = <15>;
-    };
-};
+
 
 &adc {
 	status = "okay";
